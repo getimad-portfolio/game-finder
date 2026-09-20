@@ -1,28 +1,32 @@
-# Web Games
+# Game Finder
 
-WebGames is a video game discovery web app that helps you find new and interesting games to play. With WebGames, you can search for games by platform, genre, and more. 
+This is a web app built with:
 
-## Screenshots
+- React
+- React Query
+- Zustand
+- Chakra UI
 
-<picture>
-  <img alt="A screenshot of the main window" src="https://github.com/getimad/web-games/blob/main/assets/web-games-full.jpg?raw=true">
-</picture>
+### Prerequisites
 
-## Table Of Contents
+- Node.js
+- npm
 
-| Section | Technology | Link |
-| ------- | ---------- | ---- |
-| **Client** | React | [View Code](https://github.com/getimad/web-games/tree/main/web-games.client) |
-| **Server** | *None* | *Not Available* |
+## Getting Started
 
-## License
+To get started with Game Finder, follow these steps:
 
-This project is licensed under the MIT License.
-
-## Contact Me
-
-If you have any questions, feel free to reach out to me at:
-
-<a href="https://www.linkedin.com/in/getimad/" target="_blank">
-  <img alt="Static Badge" src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin">
-</a>
+1. Clone this repository to your local machine. ⬇️
+2. Open the project directory: `cd ./game-finder` 👣
+3. Run `npm install` to install the required dependencies. 🤖
+4. Get a RAWG API key at https://rawg.io/apidocs. You'll have to create an account first. ✅
+5. Add the API key to **src/services/api-client.ts**. 🆗
+   ```typescript
+   const axiosInstance = axios.create({
+     baseURL: 'https://api.rawg.io/api',
+     params: {
+       key: // Pass here your API Key as a string.
+     }
+   });
+   ```
+6. Run `npm run dev` to start the web server. 💫
