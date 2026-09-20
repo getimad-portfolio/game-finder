@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Box, Flex, Text, useColorMode } from "@chakra-ui/react";
+import { Box, Flex, Text, useColorMode, Image } from "@chakra-ui/react";
 import ToggleThemeSwitch from "./ToggleThemeSwitch";
 import SearchButton from "./SearchButton";
 import SearchContainer from "./SearchContainer";
@@ -30,9 +30,12 @@ function NavBar() {
           justifyContent="space-between"
         >
           <Link to="/">
-            <Text fontSize="xl" fontWeight={700} textDecoration="underline">
-              Game Finder
-            </Text>
+            <Flex alignItems="center" gap="2">
+              <Image src="/icon.svg" alt="Game Finder icon" boxSize="28px" />
+              <Text fontSize="lg" fontWeight={700}>
+                Game Finder
+              </Text>
+            </Flex>
           </Link>
           <SearchButton />
           <ToggleThemeSwitch />
